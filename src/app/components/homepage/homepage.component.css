@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&family=Roboto:wght@300;400&family=Rubik&family=Shadows+Into+Light&family=Single+Day&family=Ubuntu:wght@500&display=swap");
+.body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d2def7;
+  color: #403dd0;
+  font-family: "Single Day", cursive;
+  padding: 10px;
+  font-size: 20px;
+  text-align: left;
+  height: 10vh;
+  
+}
+
+nav {
+  overflow: hidden;
+}
+
+nav a {
+  font-size: medium;
+  background-color: #2196f3;
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 3px 4px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0px 7px;
+}
+
+nav a:hover {
+  background-color: #16598f;
+  color: white;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+section img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #34495e;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  overflow-x: auto;
+  bottom: 0;
+}

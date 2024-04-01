@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&family=Roboto:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98vw;
+  height: 100vh;
+}
+
+.container {
+  background-color: rgb(243, 251, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 60vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-img {
+  width: 50%;
+}
+.project-img img {
+  margin-top: 0.7vh;
+  max-width: 100%; /* Adjust this based on your requirements */
+  height: 70vh;
+}
+
+.user-panel {
+  text-align: center;
+  width: 50%;
+}
+
+.project-section {
+  margin-bottom: 5vh;
+}
+
+.projectList {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+    font-size: 24px;
+    margin-bottom: 60px;
+}
+
+.dropdown-container {
+    position: relative;
+
+    margin: 20px 0px;
+  }
+  
+  .dropdown-btn {
+    color: black;
+    padding: 10px;
+    background-color: yellow;
+    border: 2px solid rgb(231, 231, 214);
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dropdown-container:hover .dropdown-content {
+    display: block;
+  }
+
+.buttons-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px;
+  width: 35%;
+}
+
+.continue-button {
+  background-color: #5bd259;
+  color: white;
+  margin: 20px 0px;
+  padding: 10px 20px;
+  border: 1px solid #5bd259;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.create-button {
+  background-color: #17628b;
+  color: white;
+  margin: 20px 0px;
+  padding: 10px 20px;
+  border: 1px solid #17628b;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media (max-width: 800px) {
+  /* Adjust styles for smaller screens */
+  .container {
+    padding: 10px;
+  }
+
+  .project-img {
+    display: none;
+  }
+
+  .user-panel {
+    width: 100%;
+  }
+
+  .dropdown-btn, .dropdown-content {
+    width: 100%;
+  }
+  .buttons-row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin-bottom: 10px;
+  }
+}

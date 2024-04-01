@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 98vw;
+  height: 100vh;
+  /* background-color: black; */
+}
+
+.register-container {
+  display: flex;
+  flex-direction: row;
+  width: 57vw;
+  min-width: 350px;
+  height: 600px;
+  color: white;
+  box-shadow: 0 0 10px gray;
+}
+
+.register-image {
+  width: 50%;
+}
+.register-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.form{
+  width: 50%;
+}
+.register-form {
+  text-align: center;
+  max-width: 400px;
+  background-color: ghostwhite;
+  text-align: center;
+  width: 100%;
+}
+
+.registration-heading {
+  font-family: "Roboto Condensed", sans-serif;
+  color: black;
+  font-size: 24px;
+  margin: 20px 0px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-group select {
+  width: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.submit-button {
+  background-color: #17628b;
+  color: white;
+  margin: 20px 0px;
+  padding: 10px 20px;
+  border: 1px solid #17628b;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: rgb(51, 141, 141);
+}
+
+
+@media (max-width: 700px) {
+  .register-image {
+    display: none; /* Hide the login image when screen width is below 500px */
+  }
+
+  .register-form{
+    width: 100%;
+  }
+}

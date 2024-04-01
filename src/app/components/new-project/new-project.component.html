@@ -1,0 +1,36 @@
+<div class="comp-logo" style="margin: 10px">
+  <img src="../../../assets/dashlogo.png" alt="" height="35px" width="60px">
+</div>
+<div class="newProject">
+  <div class="newProject-container">
+    <div class="newProject-image">
+      <img src="../../../assets/createProjectImage.png" alt="" />
+    </div>
+    <div class="newProject-form">
+      <div class="formContain">
+        <div class="newProject-heading">Create New Project</div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            id="companyName"
+            name="companyName"
+            placeholder="Enter your Company Name"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            [(ngModel)]="projectName"
+            type="text"
+            id="projectName"
+            name="projectName"
+            placeholder="Enter your Project Name"
+          />
+        </div>
+
+        <button type="submit" class="submit-button" routerLink="../dashboard">Create Project</button>
+      </div>
+    </div>
+  </div>
+</div>

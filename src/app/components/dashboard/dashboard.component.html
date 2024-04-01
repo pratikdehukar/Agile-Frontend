@@ -1,0 +1,224 @@
+<nav class="navbar">
+  <div>
+    <img src="../../../assets/dashlogo.png" alt="CLogo" class="logo" />
+  </div>
+  <div>
+    <div class="dropdown stylish-dropdown">
+      <button class="dropbtn stylish-dropbtn">Your Project</button>
+      <div class="dropdown-content stylish-dropdown-content">
+        <a href="#">Project 1</a>
+        <a href="#">Project 2</a>
+        <a href="#">Project 3</a>
+      </div>
+    </div>
+
+    <div class="dropdown stylish-dropdown">
+      <button class="dropbtn stylish-dropbtn">Dashboards</button>
+      <div class="dropdown-content stylish-dropdown-content">
+        <a routerLink="/dashboard/project-details">Project Details</a>
+        <a routerLink="/dashboard/task-board">Task board</a>
+        <a routerLink="/dashboard/calendar-view">Calender View</a>
+        <a routerLink="/dashboard/resource-allocation">Resource allocation</a>
+        <a routerLink="/dashboard/file-management">File Management</a>
+        <a routerLink="/dashboard/project-details">Discussion Forum</a>
+        <!-- Add more dashboard options as needed -->
+      </div>
+    </div>
+
+    <div class="dropdown stylish-dropdown">
+      <button class="dropbtn stylish-dropbtn">Teams</button>
+      <div class="dropdown-content stylish-dropdown-content">
+        <a href="#">Team 1</a>
+        <a href="#">Team 2</a>
+        <a href="#">Team 3</a>
+        <!-- Add more team options as needed -->
+      </div>
+    </div>
+  </div>
+  <div class="right-nav">
+    <div>
+      <button class="create-button" (click)="showCreateIssueForm()">
+        Create
+      </button>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search" />
+    </div>
+    <div class="notification">
+      <img src="../../../assets/notification-bell.png" alt="" routerLink="/notifications">
+    </div>
+  </div>
+</nav>
+
+<div class="dashboard">
+  <div class="sidebar">
+    <div class="project-name">
+      <h1>{{projectName}}</h1>
+
+      <div class="sidebar-itemeut">
+        <img
+          src="../../../assets/letter-e-xxl.png"
+          alt="Epic Symbol"
+          class="entity-symbol"
+        />
+        <button class="sidebar-button" (click)="showCreateEpicForm()">
+          Epic
+        </button>
+      </div>
+
+      <div class="sidebar-itemeut">
+        <img
+          src="../../../assets/letter-u-xxl.png"
+          alt="User Stories Symbol"
+          class="entity-symbol"
+        />
+        <button class="sidebar-button" (click)="showCreateUserStoriesForm()">
+          UserStories
+        </button>
+      </div>
+
+      <div class="sidebar-itemeut">
+        <img
+          src="../../../assets/letter-t-xxl.png"
+          alt="Tasks Symbol"
+          class="entity-symbol"
+        />
+        <button class="sidebar-button" (click)="showCreateTaskForm()">
+          Tasks
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dashborad-img">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- "Create Issue" Form -->
+<div class="create-issue-popup-container" *ngIf="showCreateIssuePopup">
+  <div class="popup-content create-issue-popup-content">
+    
+    <h2 style="font-family: cursive; font-weight: 300;font-size: large;">Create Issue</h2>
+    <form (submit)="submitIssueForm()">
+      <label for="project" style="font-family: cursive;">Project:</label>
+      <select id="project" name="project">
+        <option value="project1">Project 1</option>
+        <option value="project2">Project 2</option>
+        <option value="project3">Project 3</option>
+      </select>
+
+      <label for="issue" style="font-family: cursive;">Issue:</label>
+      <select id="issue" name="issue">
+        <option value="issue1">Issue 1</option>
+        <option value="issue2">Issue 2</option>
+        <option value="issue3">Issue 3</option>
+      </select>
+
+      <label for="issueSummary" style="font-family: cursive;">Summary:</label>
+      <input type="text" id="issueSummary" name="issueSummary" required />
+
+      <label for="issueDescription" style="font-family: cursive;">Description:</label>
+      <textarea
+        id="issueDescription"
+        name="issueDescription"
+        rows="4"
+      ></textarea>
+
+      <div class="button-container">
+        <button
+          class="cancel-button"
+          type="button"
+          (click)="closeCreateIssueForm()"
+        >
+          Cancel
+        </button>
+        <button class="create-button" type="submit">Create</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="epic-popup-container" *ngIf="showCreateEpicPopup">
+  <div class="epic-form-content">
+    
+    <h2 style="font-family: cursive; font-weight: 300;font-size: large;">Create Epic</h2>
+    <form (submit)="submitEpicForm()">
+      <label for="epicSummary" style="font-family: cursive;">Summary:</label>
+      <input type="text" id="epicSummary" name="epicSummary" required />
+
+      <label for="epicDescription" style="font-family: cursive;">Description:</label>
+      <textarea id="epicDescription" name="epicDescription" rows="4"></textarea>
+
+      <div class="button-container">
+        <button
+          class="cancel-button"
+          type="button"
+          (click)="closeCreateEpicForm()"
+        >
+          Cancel
+        </button>
+        <button class="create-button" type="submit">Create</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="user-stories-popup-container" *ngIf="showCreateUserStoriesPopup">
+  <div class="popup-content">
+    
+    <h2 style="font-family: cursive; font-weight: 300;font-size: large;">Create User Stories</h2>
+    <form (submit)="submitUserStoriesForm()">
+      <label for="userStoriesSummary" style="font-family: cursive;">Summary:</label>
+      <input
+        type="text"
+        id="userStoriesSummary"
+        name="userStoriesSummary"
+        required
+      />
+
+      <label for="userStoriesDescription" style="font-family: cursive;">Description:</label>
+      <textarea
+        id="userStoriesDescription"
+        name="userStoriesDescription"
+        rows="4"
+      ></textarea>
+
+      <div class="button-container">
+        <button
+          class="cancel-button"
+          type="button"
+          (click)="closeCreateUserStoriesForm()"
+        >
+          Cancel
+        </button>
+        <button class="create-button" type="submit">Create</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- "Create Task" Form -->
+<div class="task-popup-container" *ngIf="showCreateTaskPopup">
+  <div class="popup-content task-popup-content">
+    
+    <h2 style="font-family: cursive;font-weight: 300;font-size: large;">Create Task</h2>
+    <form (submit)="submitTaskForm()">
+      <label for="taskSummary" style="font-family: cursive;">Summary:</label>
+      <input type="text" id="taskSummary" name="taskSummary" required />
+
+      <label for="taskDescription" style="font-family: cursive;">Description:</label>
+      <textarea id="taskDescription" name="taskDescription" rows="4"></textarea>
+
+      <div class="button-container">
+        <button
+          class="cancel-button"
+          type="button"
+          (click)="closeCreateTaskForm()"
+        >
+          Cancel
+        </button>
+        <button class="create-button" type="submit">Create</button>
+      </div>
+    </form>
+  </div>
+</div>

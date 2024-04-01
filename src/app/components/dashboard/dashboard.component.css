@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eceff1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: rgb(76, 110, 243);
+  height: 15vh;
+}
+
+.logo {
+  width: 60px; 
+  height: 35px;
+  margin-left: 20px; 
+}
+
+
+.stylish-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.stylish-dropbtn {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stylish-dropbtn:hover {
+  background-color: #0c368c;
+  color: white;
+}
+
+.stylish-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.stylish-dropdown-content a {
+  color: #040404; /* Font color */
+  padding: 12px 16px; /* Padding for spacing */
+  text-decoration: none;
+  display: block;
+  font-size: 12px; /* Font size */
+  font-family: "YourFontStyle", sans-serif; /* Custom font style */
+  transition: background-color 0.3s;
+}
+
+.stylish-dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.stylish-dropdown:hover .stylish-dropdown-content {
+  display: block;
+}
+
+.your-project-dropdown {
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.right-nav {
+  display: flex;
+  margin-right: 30px;
+}
+
+.create-button {
+  background-color: #2196f3; /* Blue button color */
+  color: rgb(245, 246, 248);
+  border: none;
+  padding: 6px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Styling for the "Create Issue" pop-up container */
+.create-issue-popup-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the pop-up content */
+.popup-content.create-issue-popup-content {
+  background-color: rgb(246, 251, 252);
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative; /* Added for centering */
+}
+
+ 
+/* Styling for the close button */
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style for the "Create" button */
+
+/* Style for the "Create" button hover state (optional) */
+.create-button:hover {
+  background-color: #1565c0;
+}
+
+.search-bar{
+  border-radius: 4px;
+  padding: 5px;
+}
+.search-bar input{
+  padding: 7px 10px;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+}
+/* sidebar ---------------> */
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: center;
+  height: 85vh;
+  width: 30%;
+  max-width: 200px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 4px 0 6px -4px rgba(0, 0, 0, 0.5);
+}
+
+.dashborad-img{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-item {
+  padding: 10px 0;
+  cursor: pointer;
+  align-items: center;
+}
+
+.entity-symbol {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.sidebar-itemeut {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  padding: 0px 0;
+  cursor: pointer;
+  align-items: center;
+}
+
+.sidebar-itemeut img {
+  height: 15px;
+  width: 15px;
+}
+.custom-entity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.custom-entity:hover {
+  color: #1565c0;
+  transition: color 0.3s;
+}
+
+.sidebar-item a {
+  text-decoration: none;
+  color: rgb(10, 10, 10);
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+}
+.sidebar-item a:hover {
+  color: #1565c0;
+  transition: color 0.3s;
+}
+
+.project-name {
+  padding: 20px; /* Adjust as needed for spacing */
+  text-align: center;
+}
+
+.project-name h1 {
+  font-family: Arial, Helvetica, sans-serif; 
+  font-weight: 200;
+  font-size: 18px; /* Adjust as needed for the font size */
+  color: #070707; /* Choose an attractive color */
+  margin-bottom: 20px;
+}
+
+.create-button {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+select,
+input,
+textarea {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Style for the Cancel and Create buttons */
+.cancel-button {
+  border-radius: 4px;
+  background-color: #ddd;
+  border: none;
+  padding: 6px 8px;
+}
+
+.cancel-button:hover{
+  border-radius: 4px;
+  color: white;
+  background-color: #020202;
+  border: none;
+  padding: 6px 8px;
+}
+
+.create-button {
+  background-color: #2196f3;
+  color: white;
+}
+
+.create-button:hover {
+  background-color: #1565c0;
+}
+
+
+
+/* Styling for the buttons */
+.sidebar-button {
+  display: block;
+  width: 60%;
+  padding: 6px 6px;
+  background-color: #e6e9ed; /* Background color */
+  color: #101b35; /* Text color */
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sidebar-button:hover {
+  background-color: #0056b3;
+  color: white; /* Hover background color */
+}
+
+/* Styling for the "Create Epic" pop-up container */
+.epic-popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.epic-form-content {
+  background: rgb(246, 251, 252);
+  border-radius: 5px;
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+}
+
+.epic-popup-container .close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+.epic-popup-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.epic-popup-container form {
+  /* Form styling goes here */
+}
+
+/* Additional styling for form elements, buttons, etc. */
+
+.user-stories-popup-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the pop-up content */
+.popup-content {
+  background-color: rgb(246, 251, 252);
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative; /* Added for centering */
+}
+
+/* Styling for the close button */
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style for the "Create" button */
+.create-button {
+  /* Your existing create button styles */
+  cursor: pointer;
+}
+
+/* Style for the "Create" button hover state (optional) */
+.create-button:hover {
+  background-color: #1565c0;
+}
+
+/* Styling for the "Create Task" pop-up container */
+.task-popup-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the pop-up content */
+.popup-content.task-popup-content {
+  background-color: rgb(246, 251, 252);
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative; /* Added for centering */
+}
+
+/* Styling for the close button */
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style for the "Create" button */
+.create-button {
+  /* Your existing create button styles */
+  cursor: pointer;
+}
+
+/* Style for the "Create" button hover state (optional) */
+.create-button:hover {
+  background-color: #1565c0;
+}

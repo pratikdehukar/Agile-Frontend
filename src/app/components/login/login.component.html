@@ -1,0 +1,48 @@
+<div class="comp-logo" style="margin: 10px">
+  <img src="../../../assets/dashlogo.png" alt="" height="35px" width="60px">
+</div>
+<div class="login">
+  <div class="login-container">
+    <div class="login-image">
+      <img src="../../../assets/loginImage.png" alt="" />
+    </div>
+    <div class="login-form" [formGroup]="loginForm">
+      <div class="login-heading">Login</div>
+
+      <div class="form-group">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          formControlName="email"
+          placeholder="Enter your email"
+        />
+      
+        <div *ngIf="submitted && loginForm.get('email')?.hasError('required')" class="error-message">
+          Email is required.
+        </div>
+        <div *ngIf="submitted && loginForm.get('email')?.hasError('email')" class="error-message">
+          Invalid email format.
+        </div>
+        
+        
+
+      <div class="form-group">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          formControlName="password"
+          placeholder="Enter your password"
+        />
+        <div *ngIf="submitted && loginForm.get('password')?.hasError('required')" class="error-message">
+          Password is required.
+        </div>
+        
+      </div>
+
+      <button type="submit" class="submit-button" (click)="submitForm()">Login</button>
+    </div>
+    
+  </div>
+</div>
