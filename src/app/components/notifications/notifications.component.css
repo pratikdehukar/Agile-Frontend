@@ -8,3 +8,17 @@
     justify-content: center;
     align-items: center;
 }
+
+.nonoty{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.nonoty h2{
+    font-family: cursive;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}

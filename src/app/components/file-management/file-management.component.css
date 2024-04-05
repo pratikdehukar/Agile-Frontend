@@ -1,0 +1,111 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
+
+header, footer {
+  
+  color: #000000;
+  text-align: center;
+  padding: 10px 0;
+}
+
+header h1{
+  background-color: #2196f3;
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+  padding: 5px 10px;
+}
+
+.search-container {
+  margin-top: 10px;
+}
+
+#search-input {
+  padding: 5px;
+  width: 200px;
+}
+
+#search-button {
+  margin-left: 20px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+}
+
+.file-explorer {
+  
+  padding: 20px;
+}
+
+.folder {
+  margin-bottom: 20px;
+}
+
+.folder i,.folder span{
+  margin: 10px;
+}
+
+.folder-icon {
+ 
+  width: 24px;
+  height: 24px;
+  background: url('../../../assets/folder.png') no-repeat center center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.file-icon {
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.file-pdf {
+  background-image: url('../../../assets/pdf.png');
+}
+
+.file-image {
+  background-image: url('../../../assets/document.png');
+}
+
+.files {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.file {
+  margin-bottom: 5px;
+}
+
+.file-actions {
+  display: inline-block;
+}
+
+.btn-download, .btn-delete {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: rgb(233, 33, 33);
+}
+
+.btn-download:hover, .btn-delete:hover {
+  background-color: #0056b3;
+}

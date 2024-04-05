@@ -1,0 +1,101 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.project-details{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    width: 60vw;
+}
+
+h1 {
+  background-color: #2196f3;
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+  padding: 5px 10px;
+  width: 60vw;
+  
+}
+
+
+
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+.milestone-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.milestone-section ul{
+  display: flex;
+  flex-direction: column;
+}
+.milestone-section li{
+  
+  color: blue;
+  margin-top: 6px;
+}
+
+.add-milestone {
+  margin-top: 20px;
+}
+
+.add-milestone input{
+  margin-right: 20px;
+  padding: 7px;
+}
+
+.milestone-icon {
+  margin-top: 20px;
+  width: 25px;
+  height: 25px;
+  background-image: url('../../../assets/milestone.png'); /* Specify the path to your milestone icon */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  vertical-align: middle;
+}

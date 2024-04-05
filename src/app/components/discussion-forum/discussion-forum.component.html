@@ -1,1 +1,52 @@
-<p>discussion-forum works!</p>
+<div
+  class="discussion"
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+  "
+>
+  <header>
+    <h1>Discussion Forum</h1>
+  </header>
+
+  <button
+    style="
+      background-color: #3586d4;
+      padding: 10px;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      margin: 15px 0px;
+    "
+    (click)="toggleFormVisibility()"
+  >
+    Create New Thread
+  </button>
+
+  <div *ngIf="isFormVisible" class="thread-creation">
+    <h2>Create New Forum</h2>
+    <form>
+      <label for="thread-title">Title:</label>
+      <input type="text" id="thread-title" name="thread-title" [(ngModel)]="newThread.title">
+      <label for="thread-creator">Creator:</label>
+      <input type="text" id="thread-creator" name="thread-creator" [(ngModel)]="newThread.creator">
+      <label for="thread-date">Date:</label>
+      <input type="date" id="thread-date" name="thread-date" [(ngModel)]="newThread.date">
+      <label for="thread-content">Content:</label>
+      <textarea id="thread-content" name="thread-content" [(ngModel)]="newThread.content"></textarea>
+      <button type="button" (click)="onSubmit()">Submit</button>
+    </form>
+  </div>
+
+  <div class="thread-listing">
+    <div class="thread" *ngFor="let thread of threads">
+      <h2>{{ thread.title }}</h2>
+      <span>Creator: {{ thread.creator }} | Date: {{ thread.date }}</span>
+      <p>{{ thread.content }}</p>
+      <button style="padding: 5px;background-color: rgb(14, 161, 11); color: white; border: none; border-radius: 5px;" (click)="deleteThread(thread)">Done</button>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,55 @@
-<p>project-details works!</p>
+<div class="project-details">
+  <h1>Project Details</h1>
+  <div class="project-info">
+    <h2>Project Name: <span style="color:#2196f3;font-size:large;">Sarvshikhan: Project Management Tool </span></h2>
+    <p style="margin: 15px 0px;">
+      This project builds a web app for Scrum agile project management.
+      Leveraging Angular's frontend and Spring Boot's backend, the tool offers
+      features for user stories, backlog management, sprint planning, and task
+      tracking. This collaborative platform empowers teams to manage projects
+      iteratively and adaptively, aligning with the Scrum framework. It provides
+      a modern solution for teams seeking to enhance project efficiency and
+      agility.
+    </p>
+    <p style="margin: 15px 0px;">Status: <span style="color: blue;">In Progress</span></p>
+  </div>
+  
+  <h2 style="margin: 15px 0px;">Project Members</h2>
+  <table style="margin: 15px 0px;">
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+    </tr>
+    <tr>
+      <td>Pratik Dehukar</td>
+      <td>Softwer Developer</td>
+    </tr>
+    <tr>
+      <td>Kunal Dalvi</td>
+      <td>Softwer Developer</td>
+    </tr>
+    <tr>
+        <td>Mangesh Amrutkar</td>
+        <td>Softwer Developer</td>
+      </tr>
+      <tr>
+        <td>Shubham Sul</td>
+        <td>Softwer Developer</td>
+      </tr>
+    <!-- Add more rows for additional project members -->
+  </table>
+  <div class="milestone-section">
+    <h2 style="margin: 20px 0px;">Milestones</h2>
+    <ul>
+      <li *ngFor="let milestone of milestones"><span class="milestone-icon"></span> {{ milestone }}</li>
+    </ul>
+    <div class="add-milestone">
+      <input type="text" [(ngModel)]="newMilestone" placeholder="Enter new milestone">
+      <button (click)="addMilestone()">Add Milestone</button>
+    </div>
+  </div>
+  
+  <!-- Dynamic chart -->
+  
+  
+</div>

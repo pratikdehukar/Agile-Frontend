@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: cursive;
 }
 
 .navbar {
@@ -147,20 +148,21 @@
   display: flex;
   align-items: center;
   margin: 0px 10px;
+  cursor: pointer;
 }
 /* sidebar ---------------> */
 
 .dashboard {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  
 }
 
 .sidebar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   height: 85vh;
-  width: 30%;
+  width: 40%;
   max-width: 200px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 4px 0 6px -4px rgba(0, 0, 0, 0.5);
@@ -170,7 +172,7 @@
   width: 80%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 50px;
 }
 
 .sidebar-item {

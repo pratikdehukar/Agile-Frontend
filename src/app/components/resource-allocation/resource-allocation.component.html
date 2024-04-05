@@ -1,1 +1,159 @@
-<p>resource-allocation works!</p>
+<div class="container">
+  <h1>Resource Allocation</h1>
+  <h2>Team Members</h2>
+  <table class="team-members">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pratik Dehukar</td>
+        <td>Software Developer</td>
+        <td>80%</td>
+      </tr>
+      <tr>
+        <td>Kunal Dalvi</td>
+        <td>Software Developer</td>
+        <td>80%</td>
+      </tr>
+      <tr>
+        <td>Mangesh Amrutkar</td>
+        <td>Software Developer</td>
+        <td>80%</td>
+      </tr>
+      <tr>
+        <td>Shubham Sul</td>
+        <td>Software Developer</td>
+        <td>80%</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <h2 style="margin-top: 40px;">Task Allocation</h2>
+    <table class="task-allocation">
+      <thead>
+        <tr>
+          <th>Task/Project Name</th>
+          <th>Assigned Team Member</th>
+          <th>Workload</th>
+          <th>Due Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Project A</td>
+          <td>Pratik Dehukar</td>
+          <td>50%</td>
+          <td>2024-04-15</td>
+          <td>In Progress</td>
+        </tr>
+        <tr>
+          <td>Project B</td>
+          <td>Kunal Dalvi</td>
+          <td>30%</td>
+          <td>2024-04-20</td>
+          <td>Not Started</td>
+        </tr>
+        <tr>
+          <td>Project A</td>
+          <td>Mangesh Amrutkar</td>
+          <td>50%</td>
+          <td>2024-04-15</td>
+          <td>In Progress</td>
+        </tr>
+        <tr>
+          <td>Project B</td>
+          <td>Shubham sul</td>
+          <td>30%</td>
+          <td>2024-04-20</td>
+          <td>Not Started</td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <h2 style="margin-top: 30px;">Resource Utilization Over Time</h2>
+  <div class="chart">
+    <div class="line"></div>
+    <!-- Sample data points -->
+    <div class="data-point" style="left: 10%; bottom: 30%;"></div>
+    <div class="data-point" style="left: 30%; bottom: 70%;"></div>
+    <div class="data-point" style="left: 50%; bottom: 50%;"></div>
+    <div class="data-point" style="left: 70%; bottom: 80%;"></div>
+    <div class="data-point" style="left: 90%; bottom: 40%;"></div>
+  </div>
+  <!-- Sample x-axis labels -->
+  <div class="x-axis">
+    <span>Week 1</span>
+    <span>Week 2</span>
+    <span>Week 3</span>
+    <span>Week 4</span>
+    <span>Week 5</span>
+  </div>
+  <!-- Sample y-axis labels -->
+  <div class="y-axis">
+    <span>0%</span>
+    <span>20%</span>
+    <span>40%</span>
+    <span>60%</span>
+    <span>80%</span>
+    <span>100%</span>
+  </div>
+
+  <h2 style="margin-top: 30px;">Resource Allocation Filters</h2>
+    <div class="filters">
+      
+      <label for="project-filter">Project:</label>
+      <select id="project-filter">
+        <option value="all">All Projects</option>
+        <option value="project1">Project 1</option>
+        <option value="project2">Project 2</option>
+        <!-- Add more project options as needed -->
+      </select>
+
+      <label for="team-member-filter">Team Member:</label>
+      <select id="team-member-filter">
+        <option value="all">All Team Members</option>
+        <option value="member1">Team Member 1</option>
+        <option value="member2">Team Member 2</option>
+        <!-- Add more team member options as needed -->
+      </select>
+
+      <label for="timeframe-filter">Timeframe:</label>
+      <select id="timeframe-filter">
+        <option value="all">All Timeframes</option>
+        <option value="last-week">Last Week</option>
+        <option value="this-week">This Week</option>
+        <option value="next-week">Next Week</option>
+        <!-- Add more timeframe options as needed -->
+      </select>
+    </div>
+    <div class="adjust-data">
+    <h2 style="margin-top: 30px;">Adjust Resource Allocations</h2>
+    <div class="adjustments">
+      <label for="task">Select Task:</label>
+      <select id="task">
+        <option value="task1">Task 1</option>
+        <option value="task2">Task 2</option>
+        <!-- Add more task options as needed -->
+      </select>
+
+      <label for="team-member">Assign To:</label>
+      <select id="team-member">
+        <option value="member1">Team Member 1</option>
+        <option value="member2">Team Member 2</option>
+        <!-- Add more team member options as needed -->
+      </select>
+
+      <label for="workload">Workload:</label>
+      <input type="number" id="workload" min="0" max="100" value="50">
+
+      <button id="update-btn">Update Allocation</button>
+    </div>
+  </div>
+</div>
